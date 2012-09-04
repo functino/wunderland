@@ -1,0 +1,21 @@
+{
+  "name": "wunderland",
+  "description" : "My little app helper",
+  "homepage": "https://github.com/functino/watch",
+  "bugs":
+  { "url": "https://github.com/functino/watch/issues" },
+  "repository": { "type": "git",
+    "url": "git://github.com/functino/watch.git"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "2.5.x",
+    "node-minify": "0.4.x",
+    "eco": "1.1.x",
+    "watch": "0.5.x",
+    "mkdirp": "0.3.x"
+  },
+  "main": "lib/index",
+  "bin": "./bin/wunderland",
+  "engines" : ["node >=0.1.95"]
+}

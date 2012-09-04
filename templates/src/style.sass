@@ -1,0 +1,56 @@
+@import "compass/reset"
+@import "compass/css3"
+
+@font-face
+  font-family: 'Chau Philomene One'
+  font-style: normal
+  font-weight: 400
+  src: local('Chau Philomene One'), local('ChauPhilomeneOne-Regular'), url('fonts/chau-philomene-one.woff') format('woff'),  url('fonts/chau-philomene-one.ttf') format('truetype')
+*
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.0) // disable the highlight on ios when elements get tapped
+html, body
+  +experimental(user-select, none)
+  font-family: Chau Philomene One
+  color: black
+  background-image: url(grey.png)  
+#app
+  font-size: 20px
+  width: 1024px
+  height: 768px
+  margin: 0 auto
+  position: relative
+  overflow: hidden
+.iphone 
+  #app
+    width: 480px
+    height: 320px
+.question 
+  background-color: #eee
+  +border-radius(5px)
+  padding: 10px 
+  margin: 10px
+  color: white
+  background-image: url(blue.png)
+.question .text 
+  margin: 20px
+  margin-top: 0px
+.question .answer
+  padding: 10px
+  background-image: url(grey.gif)  
+  +border-radius(5px)
+  background-color: #fff
+  border: 1px white solid
+  margin: 5px
+  cursor: pointer
+.question .category
+  font-size: 11px
+  text-align: right
+  color: #ccc
+  float:right
+.question .answer.success 
+  background-color: green
+  color: white
+  background-image: none
+.question .answer.fail
+  background-color: red
+  background-image: none

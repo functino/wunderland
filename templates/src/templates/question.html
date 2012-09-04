@@ -1,0 +1,14 @@
+<div class="question">
+	<div class="category"> <%= @category %></div>
+	<% if @picture != "/images/question-no-image.gif": %>
+		<center><img src="images/<%= @picture %>" /></center><br />
+	<% end %>
+	<div class="text">
+		<%= @text %>
+	</div>
+	<% i = 0 %>
+	<% for answer in @answers: %>
+	  <div class="answer answer-<%= i %>"><%= answer %></div>
+	  <% i++ %>
+	<% end %>
+</div>

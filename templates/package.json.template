@@ -1,0 +1,10 @@
+{
+  "name": "<%= @appName %>",
+  "version": "0.0.1",
+  "dependencies": { 
+    "wunderland": "git://github.com/functino/wunderland.git"
+  },
+  "engines": {
+    "node": "0.7.x"
+  }
+}
