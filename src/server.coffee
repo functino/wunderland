@@ -2,7 +2,7 @@ module.exports = ->
   express = require('express')
   fs = require("fs")
   app = express.createServer()
-  app.use(express.static(__dirname + '/public'))
+  app.use(express.static('./public'))
   app.use(express.logger())
   app.get "/cache.manifest", (req, res) ->
     res.header("Content-Type", "text/cache-manifest")

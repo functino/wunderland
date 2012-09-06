@@ -2,6 +2,10 @@ Install
 ========
 Clone the repository and then run ´npm install -g´ to install the wunderland binary globally.
 
+Dependencies
+=========
+You'll need compass/sass, node, coffeescript ....
+
 Create new wunderland app
 ========
 To create a new wunderland app simply use ´wunderland create MyAwesomeApp´.
