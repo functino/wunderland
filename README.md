@@ -19,3 +19,6 @@ Run ´cake -w server´ to start developing. It will start a local server on loca
 Todo
 ========
 Better documentation, better code... This is very much just a tool that I refactored out of one of my iPhone/phonegap apps.
+
+Add Gemfile for sass
+add .sasscache to gitignore
