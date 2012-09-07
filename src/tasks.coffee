@@ -23,7 +23,7 @@ module.exports = ->
     console.log "bundled js"
   build = (watch) ->
     console.log "Watching .coffee files"
-    for folder in ['./src', './test']
+    for folder in ['./src']
       options = ['-c', '-o', folder, folder]
       options.unshift('-w') if watch
       coffee = spawnAndLog 'coffee', options
