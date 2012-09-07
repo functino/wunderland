@@ -1,0 +1,8 @@
+# Can ignore specific files
+.DS_Store
+
+# ignore sass cache
+.sass-cache/
+#/**/* 
+# ignore all node dependencies
+node_modules/
