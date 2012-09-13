@@ -16,7 +16,16 @@ module.exports = ->
     create = require("./create")
     create(appName: "testname")
   bundle = ->
+    # first add all templates to application.json
     code = compileTemplates()
+
+    # then add everything that is in our component.json as a dependency
+    componentsConfig = JSON.parse(fs.readFileSync("./component.json"))
+    for component of componentsConfig.dependencies
+      conf = JSON.parse(fs.readFileSync("./components/" + component + "/component.json"));
+      code += fs.readFileSync("./components/" + component + "/" + conf.main);
+
+    # add aditional files that are specified in application.json (by default that is translation.js and app.js)
     for file in config.bundle
       code += ";\n" + fs.readFileSync("src/" + file)
     fs.writeFileSync('public/application.js', code)

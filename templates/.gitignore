@@ -6,3 +6,6 @@
 #/**/* 
 # ignore all node dependencies
 node_modules/
+
+# ignore all components
+components/

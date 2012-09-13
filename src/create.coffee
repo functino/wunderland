@@ -37,7 +37,12 @@ module.exports = (config) ->
   createFiles(__dirname + "/../templates/")
 
   process.chdir(config.appName)
+  console.log("installing npm dependencies")
   npm = spawn "npm", ["install"]
   npm.stdout.on 'data', (data) -> print data.toString()
   npm.stderr.on "data", (data) -> process.stderr.write data.toString()
-  console.log("done")
+
+  console.log("installing bower dependencies")
+  bower = spawn "bower", ["install"]
+  bower.stdout.on 'data', (data) -> print data.toString()
+  bower.stderr.on "data", (data) -> process.stderr.write data.toString()

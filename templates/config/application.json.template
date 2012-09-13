@@ -1,12 +1,6 @@
 {
   "port": 3001,
   "bundle": [
-    "vendor/jquery.js",
-    "vendor/underscore.js",
-    "vendor/backbone.js",
-    "vendor/backbone.localstorage.js",
-    "vendor/date-utils.js",
-    "vendor/iscroll-lite.js",
     "translations.js",
     "app.js"
   ]
