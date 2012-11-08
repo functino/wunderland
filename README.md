@@ -22,3 +22,21 @@ Better documentation, better code... This is very much just a tool that I refact
 
 Add Gemfile for sass
 add .sasscache to gitignore
+
+move App-object to a file  + add shortcut for templates like this:
+
+App = 
+  supportedLanguages: ["de"] # for each supported language there needs to be a translation hash in translations.coffee and a data.$langauge.json in public
+  locale: navigator.language[0..1] # use the device/navigator language
+  events: _.extend {}, Backbone.Events # EventBus for App
+  trigger: (events, payload) -> App.events.trigger(events, payload)
+  on: (events, callback, context) -> App.events.on(events, callback, context)
+  t: (key, placeholders) -> # i18n function
+    return window.translations[App.locale][key] unless placeholders?
+    _.template(window.translations[App.locale][key], placeholders, interpolate: /\{\{(.+?)\}\}/g)  
+class App.View extends Backbone.View
+  template: (context) ->
+    context = {} unless context?
+    context.t = App.t
+    @tmpl = JST[@tmpl] if typeof @tmpl != "function"
+    @tmpl(context)
