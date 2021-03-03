@@ -11,7 +11,7 @@
   "dependencies": {
     "express": "2.5.x",
     "node-minify": "0.4.x",
-    "eco": "1.1.x",
+    "eco": "1.0.3",
     "watch": "0.5.x",
     "mkdirp": "0.3.x"
   },
